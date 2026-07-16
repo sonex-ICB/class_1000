@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*  Selectors : tag name*/
+    h1 {
+      color: red;
+      background: #000;
+    }
+
+    h2 {
+      background: #006;
+      color: #fff;
+      /* colors */
+      background: rgb(45,0,0);
+      background: #a0e;
+      background: rgb(80, 31, 31);
+      background: linear-gradient(red,black);
+      background: conic-gradient(red,black);
+      background: radial-gradient(red,black);
+      background: transparent;
+      background-image: url(music.jpg);
+    }
+
+    /* selector: child selector  */
+    div h3{
+      color:#fff;
+      background: brown;
+
+      /* text/font */
+      font-size:30px;
+      font-size:3rem;
+      font-weight: 100;
+      font-weight: 900;
+      font-weight: light;
+      font-weight: bold;
+      text-transform: lowercase;
+      text-transform: capitalize;
+      text-transform: uppercase;
+      text-align: left;
+      text-align: right;
+      text-align: center;
+      letter-spacing: 4px;
+      letter-spacing: normal;
+      word-spacing: 10px;
+      word-spacing: normal;
+      text-decoration: underline;
+      text-decoration: line-through;
+      text-decoration: overline;
+      text-decoration: none; 
+    }
+    /* multiple */
+    h4, h5, h6{
+      color:#fff;
+      background: orange;
+      font-size: 25px;
+    }
+    
+    /* class selector */
+    .demo{
+      color:blue;
+      font-size: 30px;
+    }
+    .demo1{
+      background: #000;
+    }
+    #demo{
+      background: red;
+      color:wheat
+    }
+    .list1{
+      color:purple;
+    }
+    .list2{
+      color:#090;
+    }
+    li{
+      color:yellow
+    }
+ .id{
+  color:pink;
+ }
+ 
+
+  </style>
+</head>
+
+<body>
+  <!-- CSS : Inline -->
+  <p style="color:blue;"> Lorem, ipsum dolor.</p>
+  <p style="color:red"> Lorem, ipsum dolor.</p>
+
+  <!-- CSS : Internal -->
+  <h1> Lorem, ipsum.</h1>
+  <h1> Lorem, ipsum.</h1>
+  <h2> Lorem, ipsum. Lorem ipsum dolor sit amet.</h2>
+
+  <div>
+    <h3> Lorem ipsum dolor sit.</h3>
+  </div>
+  <h3> Lorem ipsum dolor sit.</h3>
+  <h4> Lorem ipsum dolor sit amet.</h4>
+  <h5> Lorem ipsum dolor sit amet.</h5>
+  <h6> Lorem ipsum dolor sit amet.</h6>
+
+  <!-- Class and Id -->
+   <div class="demo"> Lorem, ipsum dolor.</div>
+   <div class="demo"> Lorem, ipsum dolor.</div>
+   <div class="demo demo1"> Lorem, ipsum dolor.</div>
+
+  <div id="demo"> Lorem, ipsum.</div>
+  <div id="demo1"> Lorem, ipsum.</div>
+  <div id="demo2"> Lorem, ipsum.</div>
+
+  <ul class="list1">
+    <li class="id"> Item</li>
+    <li class="id"> Item</li>
+    <li class="id"> Item</li>
+  </ul>
+  <!--  -->
+  <ul class="list2">
+    <li> Item 1</li>
+    <li> Item 2</li>
+    <li> Item 3</li>
+    <li> Item 3</li>
+    <li> Item 3</li>
+    <li class="red"> Item 3</li>
+    <li> Item 3</li>
+    <li> Item 3</li>
+    <li> Item 3</li>
+  </ul>
+</body>
+
+</html>
