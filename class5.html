@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    table{
+      width: 90%;
+      max-width: 700px;
+      margin:40px auto;
+      border:3px solid #009;
+      text-align: left;
+      border-collapse: collapse;
+    }
+    td, th{
+      padding: 10px;
+    }
+    tr{
+      background:#009;
+      color:#fff
+    }
+    
+   tr:nth-child(even){
+    background: #005;
+   }
+   tr:hover{
+     background: #009; 
+     font-weight: bold;
+    }
+
+    .text1{
+      background-color: red;
+      text-align: center;
+      width: 50%;
+      margin:30px auto;
+    }
+    .link{
+      text-align: center;
+    }
+    .text2{
+      background: orange;
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+    }
+    .text3{
+      display:inline;
+      background: yellow;
+      display: inline-block;
+      width: 20px;
+      display: none;
+    }
+  </style>
+
 </head>
+
 <body>
+  <p class="text1"> Lorem, ipsum dolor.</p>
+  <div class="link">
+    <a href=""> Back to Sin </a>
+  </div>
+  <span class="text2"> Lorem, ipsum dolor. </span>
+  <div class="text3">Lorem, ipsum.</div>
+  <div class="text3">Lorem, ipsum.</div>
+
   
+  
+  
+  
+  
+  <table>
+    <tr>
+      <th>S/No</th>
+      <th>Course</th>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td>CSS</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>PY</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>PY</td>
+    </tr>
+
+  </table>
 </body>
+
 </html>
