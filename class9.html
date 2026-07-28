@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn1{
+            background:#080;
+            padding: 10px 25px;
+            border: 0;
+            color:#fff;
+            transform:scale(1);
+            transform: rotate(-270deg);
+            transform: rotateY(70deg);
+            transform: rotateX(70deg);
+            margin: 40px;
+            transition:1s;
+            translate:-40px -50px;
+            translate:-200%;
+            translate:0;
+            &:hover{
+                transform:scale(0.8);
+                transform: rotateX(0deg);
+                background: #001;
+                border-radius: 4px;
+            }
+        }
+        .bar{
+            padding: 10px;
+            width: 120px;
+            background: #009;
+            transition:2s;
+            &:hover{
+                width: 100%;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- transition -->
+     <button class="btn1"> My Button  </button>
+     <div class="bar"></div>
+
+     <nav>
+        <a href=""> Link 1</a>
+        <a href=""> Link 2</a>
+        <a href=""> Link 3</a>
+        <a href=""> Link 4</a>
+     </nav>
+
+     <div class="box"></div>
+
+     <style>
+        nav{
+            display: flex;
+            flex-direction:column;
+        }
+        nav a{
+            padding: 10px;
+            text-decoration: none;
+            color:#fff;
+            background: #030;
+            margin: 10px 0px;
+            border-radius: 5px;
+            translate: -90%;
+            transition: 2s;
+            &:hover{
+                translate: 0;
+            }
+
+        }
+
+        /* animations */
+        .box{
+            background: orange;
+            padding: 40px;
+            animation:my_animation 4s  5;
+            animation:my_animation 4s  infinite;
+            
+        }
+
+        @keyframes my_animation{
+            0%{background: red; rotate: 0deg;}
+            40%{background: black;}
+            60%{background: blue;}
+            100%{background: yellow; rotate: 360deg;}
+        }
+     </style>
+</body>
+</html>
