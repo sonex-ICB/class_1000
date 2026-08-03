@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .profile-header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            padding: 30px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-name {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .profile-title {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .profile-contact {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+        
+        .profile-body {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-body {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .info-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #6e8efb;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f3ff;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 12px;
+        }
+        
+        .info-label {
+            min-width: 120px;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .info-value {
+            flex: 1;
+            color: #333;
+        }
+        
+        .login-data {
+            background: #f9fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        
+        .login-item {
+            margin-bottom: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            word-break: break-all;
+        }
+        
+        .map-container {
+            height: 200px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #6e8efb11, #a777e311);
+            color: #6e8efb;
+            font-weight: 500;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            background: #6e8efb;
+            color: white;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card" >
+            <div class="profile-header" id="profile_header">
+                <div class="profile-image">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Jennie Nichols">
+                </div>
+            <h1 class="profile-name">Jennie Nichols <button onclick="loaduser()" class="btn  text-light btn-sm"> <i class="fa-solid fa-arrows-rotate"></i> </button> </h1>
+                <p class="profile-title">Miss • 30 years old</p>
+                <div class="profile-contact">
+                    <div class="contact-item">
+                        <span>📞</span> (272) 790-0888
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span> (489) 330-2385
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span> jennie.nichols@example.com
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-body">
+                <div class="left-column">
+                    <div class="info-section" id="personal_info">
+                        <h2 class="section-title">Personal Information</h2>
+                        <div class="info-item">
+                            <span class="info-label">Gender:</span>
+                            <span class="info-value">Female</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Date of Birth:</span>
+                            <span class="info-value">March 8, 1992 (30 years)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Nationality:</span>
+                            <span class="info-value">United States</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">SSN:</span>
+                            <span class="info-value">405-88-3636</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Registered:</span>
+                            <span class="info-value">July 9, 2007 (14 years ago)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h2 class="section-title">Location</h2>
+                        <div class="info-item">
+                            <span class="info-label">Address:</span>
+                            <span class="info-value">8929 Valwood Pkwy, Billings, Michigan 63104</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Coordinates:</span>
+                            <span class="info-value">-69.8246, 134.8719</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Timezone:</span>
+                            <span class="info-value">+9:30 (Adelaide, Darwin)</span>
+                        </div>
+                        <div class="map-container">
+                            Map would display here using coordinates
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-column">
+                    <div class="info-section" id="login_info">
+                        <h2 class="section-title">Login Information</h2>
+                        <div class="login-data">
+                            <div class="info-item">
+                                <span class="info-label">Username:</span>
+                                <span class="info-value">yellowpeacock117</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Password:</span>
+                                <span class="info-value">addison</span>
+                            </div>
+                            <div class="login-item">
+                                <span class="badge">UUID</span> 7a0eed16-9430-4d68-901f-c0d4c1c3bf00
+                            </div>
+                            <div class="login-item">
+                                <span class="badge">Salt</span> sld1yGtd
+                            </div>
+                            <div class="login-item">
+                                <span class="badge">MD5</span> ab54ac4c0be9480ae8fa5e9e2a5196a3
+                            </div>
+                            <div class="login-item">
+                                <span class="badge">SHA1</span> edcf2ce613cbdea349133c52dc2f3b83168dc51b
+                            </div>
+                            <div class="login-item">
+                                <span class="badge">SHA256</span> 48df5229235ada28389b91e60a935e4f9b73eb4bdb855ef9258a1751f10bdc5d
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h2 class="section-title">Additional Info</h2>
+                        <div class="info-item">
+                            <span class="info-label">API Seed:</span>
+                            <span class="info-value">56d27f4a53bd5441</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Results:</span>
+                            <span class="info-value">1</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">API Version:</span>
+                            <span class="info-value">1.4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="spinner-border spinner-border-sm"></div>
+        <i>... Loadin ...</i>
+        <style>
+            .overlay{
+                position: fixed;
+                background: #00000098;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: whitesmoke;
+                transition: .5s;
+                scale: 0;
+            }
+        </style>
+    </div>
+</body>
+</html>
+<script>
+     async function 
+            loaduser(){
+                document.querySelector('.overlay').style.scale = '1'
+                url = 'https://randomuser.me/api'
+                req = await fetch(url)
+                data = await req.json();
+                personal_info = `
+                                <h2 class="section-title">Personal Information</h2>
+                                <div class="info-item">
+                                    <span class="info-label">Gender:</span>
+                                    <span class="info-value">${data.results[0].gender}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Date of Birth:</span>
+                                    <span class="info-value">${data.results[0].dob.date} (30 years)</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Nationality:</span>
+                                    <span class="info-value">${data.results[0].location.country}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class=fjddfj"info-label">SSN:</span>
+                                    <span class="info-value">${data.results[0].id.value}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Registered:</span>
+                                    <span class="info-value">${data.results[0].registered.date} (14 years ago)</span>
+                                </div>
+                `
+                document.querySelector('#personal_info').innerHTML = personal_info
+
+                document.querySelector('#profile_header').innerHTML = `
+                                    <div class="profile-image">
+                                        <img src="${data.results[0].picture.large}" alt="Jennie Nichols">
+                                    </div>
+                                    <h1 class="profile-name"> ${data.results[0].name.title} ${data.results[0].name.first} ${data.results[0].name.last} <button onclick="loaduser()" class="btn  text-light btn-sm"> <i class="fa-solid fa-arrows-rotate"></i> </button> </h1>
+                                    <p class="profile-title">Miss • ${data.results[0].dob.age} years old</p>
+                                    <div class="profile-contact">
+                                        <div class="contact-item">
+                                            <span>📞</span> ${data.results[0].phone}
+                                        </div>
+                                        <div class="contact-item">
+                                            <span>📱</span> ${data.results[0].cell}
+                                        </div>
+                                        <div class="contact-item">
+                                            <span>✉️</span> ${data.results[0].email}
+                                        </div>
+                                    </div>
+                `
+                document.querySelector('.overlay').style.scale = '0'
+                
+     }
+     loaduser()
+</script>
+</html>
+
+<iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none; opacity: 0;"></iframe>
