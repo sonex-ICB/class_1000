@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:yellow;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:340px;
+    background:#f7f7f7;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.card:hover{
+    transition:.5s;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.shoe{
+    width:120px;
+    display:block;
+    margin:0 auto 10px;
+}
+
+.stars{
+    margin-bottom:15px;
+}
+
+.icon{
+    display:inline-block;
+    
+}
+
+.card2{
+    background:white;
+    border-radius:8px;
+    padding:15px;
+    text-align:left;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.card2 h3{
+    margin-bottom:10px;
+}
+
+.card2 p{
+    margin:6px 0;
+}
+
+.price{
+    color:red;
+    font-weight:bold;
+}
+
+.btn{
+    display:block;
+    margin:20px auto 0;
+    width:150px;
+    padding:10px;
+    border:none;
+    border-radius:25px;
+    background:#2f3d4c;
+    color:white;
+    font-weight:bold;
+    
+}
+
+.btn:hover{
+    background:black;
+}
+    </style>
+</head>
+
+<body>
+    <div class="card">
+
+        <div><img src="shoes.jpeg" alt="shoe" class="shoe">
+        </div>
+
+        <div class="stars">
+            <div class="icon"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+            </div>
+            <div class="icon"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+            </div>
+
+
+            <div class="icon"><i class="fa-solid fa-star-half" style="color: rgb(255, 212, 59);"></i></div>
+        </div>
+
+        <div class="card2">
+            <h3> TOYOTA COROLLA</h3>
+            <p> Model: Corola 2018</p>
+            <p class="price">Price: $19,000</p>
+            <p> Colors: Red,White,Black</p>
+            <p> Pick Up Location: Wuse Zone 3</p>
+        </div>
+
+        <button class="btn"> ORDER NOW</button>
+
+    </div>
+</body>
+
+</html>
