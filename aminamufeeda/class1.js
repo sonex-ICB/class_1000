@@ -195,7 +195,6 @@ let users = [
         email: "fatima@gmail.com"
     }
 ];
-
 let bizmarrow = {
     brand: "Bizmarrow",
     numberOfStaff: 4,

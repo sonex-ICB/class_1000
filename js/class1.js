@@ -166,4 +166,99 @@ console.log(true || true || false) // true
 
 
 */
- 
+ my_function()
+
+// ! NOT 
+console.log(10 > 3) // true
+console.log(!10 > 3) // false
+console.log() // false
+
+// Assinment Operators
+a = 1 
+a = a // 1
+a = a + 1 // 2 
+a = a - 2 // 0
+console.log(a) // 
+ a += 2 // 2
+ a -= 2 // 0
+
+ console.log(10 + "11") // 1011 - concantenation
+ console.log(10 / "20") //  0.5
+ console.log(10 / "10x") //  NaN -  Not a Number 
+ text = "Mr "
+ user = " Solomon"
+ console.log(text + user) // concatenation 
+ console.log(`${text} ${user}`) // concatenation 
+
+
+ // Tenary operator  ? 
+ a = 10 > 6 //
+ console.log(a ? "Yes" : "No")
+
+
+ temp = 30
+ text = temp>30 ? "Not cold" : "Cold"
+ console.log(text)
+
+//  functions 
+//  A block of code 'tat performs a specific task 
+//  Create-Declare :  Call -execution 
+
+function my_function (){
+    console.log('Am a function')
+}
+my_function()
+my_function()
+my_function()
+
+x = my_function();
+my_function1  = function (){
+    console.log('Am a new function')
+}
+my_function1()
+y = my_function1()
+
+my_function2 = ()=>{
+    console.log('Am a new function 2')
+}
+my_function2()
+t = my_function2()
+
+// function params
+function sum(a,b){
+    // a = 0
+    // b = 9
+ console.log(a+b)
+}
+sum(12,78)
+sum(12,7)
+
+//   class work
+//  write a function 'tat takes a name and print welcome {name}
+
+function print_name(name){
+    console.log("Welcome " + name)
+    console.log(`Welcome ${name}`)
+}
+print_name('Max')
+print_name('Solomon')
+
+// return 
+function area_of_a_circle(r){
+    return (22/7 * (r**2))
+}
+area = area_of_a_circle(4) // 23232.2323
+console.log(area)
+console.log(area_of_a_circle(2))
+
+// creat a  function 'tat takes an array index and print an item wit' de index
+
+colors = ['red','blue']
+function print_c(x){
+    console.log(colors[x])
+}
+print_c(0)
+print_c(1)
+
+// Read about loops and conditional stmts 
+
