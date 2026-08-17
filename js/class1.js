@@ -166,12 +166,11 @@ console.log(true || true || false) // true
 
 
 */
- my_function()
+
 
 // ! NOT 
 console.log(10 > 3) // true
 console.log(!10 > 3) // false
-console.log() // false
 
 // Assinment Operators
 a = 1 
@@ -179,8 +178,12 @@ a = a // 1
 a = a + 1 // 2 
 a = a - 2 // 0
 console.log(a) // 
- a += 2 // 2
- a -= 2 // 0
+ a += 2 // 2 a = a + 2
+ a -= 2 // 0  a = a - 2
+ a *= 2 // 0  a = a * 2
+ a /= 2 // 0  a = a / 2
+
+
 
  console.log(10 + "11") // 1011 - concantenation
  console.log(10 / "20") //  0.5
@@ -192,7 +195,7 @@ console.log(a) //
 
 
  // Tenary operator  ? 
- a = 10 > 6 //
+ a = 10 < 6 //
  console.log(a ? "Yes" : "No")
 
 
@@ -203,7 +206,7 @@ console.log(a) //
 //  functions 
 //  A block of code 'tat performs a specific task 
 //  Create-Declare :  Call -execution 
-
+my_function()
 function my_function (){
     console.log('Am a function')
 }
@@ -212,6 +215,7 @@ my_function()
 my_function()
 
 x = my_function();
+
 my_function1  = function (){
     console.log('Am a new function')
 }
@@ -247,11 +251,14 @@ print_name('Solomon')
 function area_of_a_circle(r){
     return (22/7 * (r**2))
 }
-area = area_of_a_circle(4) // 23232.2323
-console.log(area)
+y = 8-6
+a = area_of_a_circle(4) // 23232.2323
+console.log(a)
 console.log(area_of_a_circle(2))
 
-// creat a  function 'tat takes an array index and print an item wit' de index
+// creat a  function 'tat takes an array index and print an item wit' 
+// de index
+
 
 colors = ['red','blue']
 function print_c(x){
@@ -260,5 +267,44 @@ function print_c(x){
 print_c(0)
 print_c(1)
 
+//  metods 
+ 
+car = {
+    name:"Toyota",
+    model:"Corolla 2025",
+    color:"Black",
+    move:function(){
+    console.log(`${this.name} is movin`)
+    }
+}
+car.move()
+
+car2 =  {... car}
+car2.name = 'BMW'
+car2.move()
+
+console.log(console)
+
+time = new Date()
+console.log(time)
+
+xr = time.getHours()
+mins = time.getMinutes()
+secs = time.getSeconds()
+console.log(`Time : ${xr} : ${mins} : ${secs}`)
+console.log(`Date : ${time.getDate()} / ${time.getMont} / ${time.getFullYear()}`)
+
+// strin metods 
+
+
+str = "Yellow world"
+console.log(str.concat(" AM learn script"))  // "Yellow world am learnin scrip"
+
+
+
+
+
 // Read about loops and conditional stmts 
+
+
 
