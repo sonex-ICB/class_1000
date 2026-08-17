@@ -299,12 +299,49 @@ console.log(`Date : ${time.getDate()} / ${time.getMont} / ${time.getFullYear()}`
 
 str = "Yellow world"
 console.log(str.concat(" AM learn script"))  // "Yellow world am learnin scrip"
+console.log(str.length)  // number of xters in a str
+console.log(str.indexOf('o'))  // returns te first index of a strin
+console.log(str.lastIndexOf('o'))  // returns te last  index of a strin
+console.log(str.indexOf('c'))  // returns -1 if not found 
+console.log(str[0])  // returns first xter in a str
+console.log(str.toUpperCase())  // converts to uppercase 
+console.log(str.toLowerCase())  
+console.log((10).toString())  // "10" converts a number to str
+console.log((12).toString(4))  // converts to a number base
+str = "Yellow world"
+console.log(str.slice(2))  // returns a strin after index 2
+console.log(str.slice(2, 6))  // returns a strin  index 2 and 6
 
 
+// return te last letter in a strin  str = 'My new text line'
+console.log(str[8])
+ str = "My new text"
+const last_letter = str[str.length-1] //M
+console.log(last_letter)
 
+// return first letter from last name in full name "Mary Sons"
+user = "Mary Sons"
+space = user.indexOf(' ');
+console.log(user[space+1])
 
+// "solomon"  make S uppercase return Solomon
+user = 'solomon'
+console.log(`${user[0].toUpperCase()}${user.slice(1).toLowerCase()}`)
 
+// number and Math metods 
+
+console.log((12.566666).toFixed()) // returns an int 13
+console.log((12.566666).toFixed(2)) // returns an a dec in 2dp 12.57
+console.log(Math.round(12.566666)) // round to te nearest int  13
+console.log(Math.ceil(12.166666)) // round up a number to te nearest int 13
+console.log(Math.floor(12.966666)) // round down a number to te nearest int 12
+console.log(Math.PI) // return 3.14 
+console.log(Number('13')) // coverts to int
+console.log(Math.random()) // return a random number between 0 and 1 
+ 
+// Read array and Object
 // Read about loops and conditional stmts 
+
 
 
 
