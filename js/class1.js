@@ -139,15 +139,24 @@ console.log("10" === 10 ) // false
 bal = 100
 w = 200
 console.log(bal>w) // false
-
+a = a + 10
+a +=10
 pass1 = '0000'
 pass2 = '1234'
 console.log(pass1 == pass2) // false
 // logical  OR  ||, && AND, ! NOT 
 console.log(true && true && false) // false
 console.log(true || true || false) // true
+if(a>0){
 
+}else{
 
+}
+
+ function new(){
+
+    // find
+ }
 /*
     1. create an array of users, [id, full name, address, email]
     2. create a suitable data structure  to store t'e data below
@@ -340,7 +349,52 @@ console.log(Number('13')) // coverts to int
 console.log(Math.random()) // return a random number between 0 and 1 
  
 // Read array and Object
-// Read about loops and conditional stmts 
+list = []
+list = [1,2,4,5]
+list = []
+list[0] = 'Apple'
+console.log(list)
+list.push('Water Melon', 'Pineapple', 'Red') // add to end
+console.log(list)
+list.unshift('Banana',) // add to be'in
+console.log(list)
+console.log(list.pop())
+list.pop()
+console.log(list)
+
+text = 'Yellow world script is awesome'
+text_array = text.split(' ')
+console.log(text_array)
+console.log(text_array.length)
+console.log(text_array.slice(0,3))
+
+// 
+t = ''
+text_array.slice(0,3).forEach(i => {
+     t+=` ${i} `   
+});
+console.log(t.trim())
+
+// loops : counter, itrate, repeat
+colors = ['red','pink','blue','purple','yellow','brown']
+for(i=0; i<colors.length; i++){
+    console.log(i)
+    console.log('Me')
+    console.log(colors[i])
+}
+colors.forEach((c,x) =>{
+    console.log(`${x+1}. ${c}`)
+})
+person = {
+    name:"Solomon",
+    addr: "NNPC",
+    course: "front end",
+    mobile:'09876543'
+}
+for(x in person){
+    console.log(`${x} : ${person[x]}`)
+}
+
 
 
 

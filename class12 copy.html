@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <!--  -->
+    <form action="#" class="container shadow my-5 p-3">
+
+            <input type="password" class="form-control">
+            <p id="response"></p>
+            <button class="btn btn-dark" onclick="process_form()"> Submit</button>
+    </form>
+
+
+    <p id="demo"> Old text </p>
+    <p id="demo2"> Old text </p>
+    <i>Welcome</i> 
+    <div></div>
+    <button type="button" onclick="sum(4,6)"> Click 1</button>
+    <button type="button" onclick="sum(2,9)"> Click 2</button>
+    <button type="button" onclick="sum(10,34)"> Click 3</button>
+    <div class="demo2"></div>
+    <div id="demo3"></div>
+    <span style="color:red"> Lorem ipsum dolor sit.</span>
+    <input type="text" placeholder="" value="" name="" id="" class="">
+    <ol type=""></ol>
+</body>
+<script>
+    console.log('Script is awesome!');
+
+    // output 
+    document.writeln("Solomon")
+    // alert('Welcome to my site')
+    document.querySelector('#demo').innerHTML  = 'A new line text'
+    
+    document.writeln("<b>Solomon</b>")
+    document.writeln("<p style='color:blue'>Solomon</p>")
+
+    // 
+    colors  = ['red','blue','purple','Pink']
+    colors.forEach((c,i) => {
+            document.write(`${i+1} . ${c}<br>`)
+
+    });
+
+    // 
+    tmp  = 36
+    document.write(tmp>=30 ? "<span style='color:red'>hot</span>" : "<span style='color:blue'>Cold</span>")
+
+    // 
+    // DOM -  metods 
+    document.writeln(document) // 
+    document.querySelector('#demo2').innerHTML = 'New text'//
+    document.querySelector('.demo2').innerHTML = 'class selector'//
+    document.querySelector('div').innerHTML = "ta'name selector" //
+    
+    document.getElementById('demo3').innerHTML = "Stickly Id selector" //
+
+    const mydiv = document.querySelector('div') 
+    mydiv.innerHTML = 'Some  new text'
+    mydiv.style.color='red'
+    mydiv.style.fontSize = '30px'
+    mydiv.id = 'demo4'
+    mydiv.className = 'my-container'
+
+    // functions 
+    function sum(x,y){
+        mydiv.innerHTML = (x+y)
+    }
+    // sum(2,7)
+
+function process_form(){
+let fullname = document.querySelector('form input').value;
+document.querySelector('#response').innerHTML = `Welcome ${fullname}`
+
+}
+
+/*
+    1.  Create a pro' that takes a temperature as a number and return cold or hot is temperature is >30
+    2.  Create a pro' that takes 2 numbers a and b and return the sum 
+    3.  creaate a password toggle 
+    
+
+*/
+
+</script>
+</html>
