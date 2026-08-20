@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container row mx-auto">
+        <form action="" class='col-12 col-md-8 col-lg-5' id="form1">
+            <input type="number" class="form-control my-2">
+            <div id="response" class="my-1"></div>
+            <button type="button" onclick="temperature()" class="btn btn-dark"> Submit</button>
+        </form>
+    </div>
+
+    <select name="" id="states">
+        <option value=""> -- SELECT STATE </option>
+    </select>
+    
+    <select name="" id="cities">
+        <option value=""> -- SELECT CITY </option>
+    </select>
+
+    <table class="table">
+        <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Unit Amount</th>
+            <th>Qty</th>
+            <th>Total Amount </th>
+        </tr>
+    </table>
+
+<script>
+    const products = [
+        {id,name,qty,},
+        {id,name,qty,},
+        {id,name,qty,}
+    ]
+
+    //1.  Create a pro' that takes a temperature as a number and return cold or hot is temperature is >30
+    function temperature(){
+        // chech for empty values 
+        let temp = document.querySelector('#form1 input');
+        const response = document.querySelector('#response');
+        response.innerHTML = temp.value > 30 ? "Place is hot, Put on AC " : "Place is cold, Turn off AC"
+        response.className =temp.value > 30 ? "alert alert-warning" : "alert alert-info" 
+        
+    }
+    /*
+
+    2.  Create a pro' that takes 2 numbers a and b and return the sum 
+    
+    
+    */
+//    3.  create a password toggle 
+ function togglepassword(){
+    const input  = document.querySelector('#form2 input');
+    input.type = input.type == 'text' ? "password":'text'
+ }
+ // implement 
+
+
+ // Creata an element
+const states = [
+    {name:"FCT", capital:"FCT", cities:[]},
+    {name:"Borno", capital:"Madu", cities:["Madu","Madu","Madu"]},
+    {name:"Nassarawa", capital:"Lafia", cities:["Lafia", "Lafia", "Lafia"]},
+    {name:"Benue", capital:"Makurdi", cities:["MKD","MKD"]},
+    {name:"Imo", capital:"Owerri", cities:["Owerri","Owerri","Owerri"]},
+]
+myElt = document.createElement("ul");
+states.forEach( s =>{
+    item = document.createElement('li');
+    item.innerHTML = `${s.name} -  ${s.capital}`     
+    myElt.appendChild(item)
+})
+document.querySelector('body').appendChild(myElt)
+
+</script>
+</html>
